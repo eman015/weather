@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url(https://www.shutterstock.com/image-photo/luxury-cruise-ship-sea-600nw-1716633040.jpg );
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: auto;
+    height: 100vh;
+    font-family: 'Poppins' , sans-serif;
+}
+.container{
+    padding: 20px 70px;  
+    color: #ffffff;
+}
+.current-info{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.date-container{
+    font-weight: 100;
+}
+.date-container .time{
+    font-size: 70px; 
+}
+.date-container#am-pm{
+    font-size: 30px;
+      margin-left: 20px;
+}
+.date-container .data{
+    font-size: 30px;
+}
+.place-continer{
+    text-align: end;
+}
+.place-continer .time-zone{
+    font-size: 30px;
+    font-weight: 100;
+}
+.place-continer .country{
+    font-size: 12px;
+    font-weight: 700;
+}
+.place-container.others{
+    display: flex;
+    flex-direction: column;
+    background: rgba(88, 88, 88, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px 0;
+    border: 1px solid #f6f2f2;
+}
+.current-info .others .weather-item{
+    display: flex;
+    justify-content: space-between;
+}
+.future-forecast{
+    background:rgba(56, 86, 142, 0.3);
+    padding: 25px;
+position: fixed;
+bottom: 0;
+display: flex;
+flex-direction: column;
+color: #050546;
+width: 100%;
+align-items: flex-start;
+justify-content: flex-start;
+overflow-y: auto;
+overflow-x:hidden ;
+}
+.future-forecast .today{
+display: flex;
+align-items: center;
+justify-content: flex-start;
+border-radius: 10px;
+border: 1px solid #f4f5f4;
+padding: 15px;
+padding-right: 40px;
+background:rgba(236, 234, 234, 0.2) ;
+margin-bottom: 15px;
+}
+.future-forecast .today .day{
+    padding:8px 20px ;
+    background-color: #fffcfd;
+    border-radius: 50px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: rgb(249, 243, 243);
+}
+.future-forecast .today .temp{
+    font-size: 18px;
+    padding-top: 15px;
+}
+.future-forecast .Weather-forecast{
+    display:flex ;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+.Weather-forecast {
+
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+    margin-top: 10px;
+    flex-wrap: nowrap;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+}
+.Weather-forecast .Weather-forecast-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 10px;
+    min-width: 100px;
+    text-align: center;
+    flex-shrink: 0;
+    border: 1px solid #1c0442;
+    background: rgba(12, 104, 114, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+.Weather-forecast-item:hover {
+    transform: scale(1.1);
+ }
+.Weather-forecast .Weather-forecast-item .day{
+   padding: 8px 20px; 
+   background: #1c4078;
+   border-radius: 50px;
+   text-align: center;
+   margin-top: 0.5%;
+   font-size: 20px;
+   color: rgb(255, 255, 255);
+}
+.Weather-forecast .Weather-forecast-item .temp {
+    font-size: 14px;
+    padding-top: 5px;
+    color: #c1cedd;
+    .today {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        border-radius: 10px;
+        border: 1px solid #ffffff;
+        padding: 15px;
+        padding-right: 40px;
+        background: rgba(116, 7, 7, 0.2);
+        margin-bottom: 15px;
+    }
+    .today .day {
+        padding: 8px 20px;
+        background-color: #fefefe;
+        border-radius: 50px;
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 16px;
+        color: rgb(255, 255, 255);
+    }
+    .today .temp {
+        font-size: 18px;
+        padding-top: 15px;
+    }
+@media only screen and (max-width:730px){
+    .container{
+        padding: 20px;
+    }
+    .future-forecast{
+        height: 50%;
+        justify-content:flex-start ;
+        align-items: flex-start;
+        overflow-y: auto;
+        padding: 20px;
+    }
+.Weather-forecast{
+    overflow-x: auto;
+}
+.Weather-forecast .Weather-forecast-item{
+    min-width: 80px;
+}
+    .future-forecast .today .temp{
+        font-size: 16px;
+    }
+    .data-container .time{
+        font-size: 50px;
+    }
+    .data-container #am-pm{
+        font-size: 20px;
+    }
+    .data-container.data{
+        font-size: 20px;
+    }
+    .place-continer{
+        text-align: end;
+        margin-top: 15px;
+    }
+    .place-continer .time-zone{
+        font-size: 20px;
+    }
+    .current-info .others{
+        padding: 12px;
+    }
+    .current-info .others .weather-item{
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 1400px){
+    .future-forecast{
+        justify-content:start;
+        align-items:unset;
+        overflow-x: scroll;
+    }
+}
+
+
+
+
+
+
+
